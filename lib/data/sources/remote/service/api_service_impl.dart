@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:prune/data/sources/remote/requests/books.dart';
-import 'package:prune/data/sources/shared/models/books.dart';
+import 'package:prune/data/sources/shared/models/book.dart';
 import 'package:http/http.dart' as http;
 import 'package:prune/data/sources/remote/requests/base.dart';
 import 'package:prune/data/sources/remote/utils/api_endpoints.dart';
@@ -15,10 +15,10 @@ import 'api_service.dart';
 class ApiServiceImpl implements ApiService {
 
   @override
-  Future<List<Books>> getBooks(BooksRequest request) async {
+  Future<List<Book>> getBooks(BooksRequest request) async {
     final response = await _doPostRequest(EndPoints.getBooks, request: request);
-    final mappedResponse = response.map((e) => Books.fromJson(e));
-    return List<Books>.from(mappedResponse);
+    final mappedResponse = response.map((e) => Book.fromJson(e));
+    return List<Book>.from(mappedResponse);
   }
 
 

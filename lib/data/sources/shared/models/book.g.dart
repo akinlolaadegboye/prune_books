@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'books.dart';
+part of 'book.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Books _$BooksFromJson(Map<String, dynamic> json) => Books(
+Book _$BookFromJson(Map<String, dynamic> json) => Book(
       id: json['id'] as int,
       bookAuthor: (json['book_author'] as List<dynamic>)
           .map((e) => e as String)
@@ -18,7 +18,7 @@ Books _$BooksFromJson(Map<String, dynamic> json) => Books(
       bookPage: json['book_pages'] as int,
     );
 
-Map<String, dynamic> _$BooksToJson(Books instance) => <String, dynamic>{
+Map<String, dynamic> _$BookToJson(Book instance) => <String, dynamic>{
       'id': instance.id,
       'book_author': instance.bookAuthor,
       'book_title': instance.bookTitle,

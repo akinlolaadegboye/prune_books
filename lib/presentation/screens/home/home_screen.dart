@@ -1,4 +1,4 @@
-import 'package:prune/data/sources/shared/models/books.dart';
+import 'package:prune/data/sources/shared/models/book.dart';
 import 'package:prune/presentation/animation/fade_animation.dart';
 import 'package:prune/presentation/components/home.dart';
 import 'package:prune/utils/general_utils.dart';
@@ -98,11 +98,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ? ListView.builder(
               itemCount: _viewState.books!.length,
               itemBuilder: (context, index) {
-                Books books = _viewState.books![index];
+                Book book = _viewState.books![index];
                 return FadeAnimation(
                     delay: GeneralUtils().delayDuration(1.5, index),
                     child: BookItem(
-                     books: books,
+                     book: book,
                     ));
               })
           : _space,

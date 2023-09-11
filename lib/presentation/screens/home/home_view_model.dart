@@ -1,4 +1,4 @@
-import 'package:prune/data/sources/shared/models/books.dart';
+import 'package:prune/data/sources/shared/models/book.dart';
 import 'package:prune/presentation/screens/home/home_view.dart';
 import 'package:flutter/widgets.dart';
 import 'package:prune/data/repos/content/content_repo.dart';
@@ -28,7 +28,7 @@ class HomeViewModel extends ChangeNotifier {
   Future<void> _loadData() async {
     try {
       state = state.copy(pageNo: 1, showLoading: true);
-      final List<Books> books = await _contentRepo.getBooks(page: state.pageNo!, itemsPerPage: 20, filters: []);
+      final List<Book> books = await _contentRepo.getBooks(page: state.pageNo!, itemsPerPage: 20, filters: []);
       state = state.copy(
           books: books,
           showLoading: false);
@@ -45,7 +45,7 @@ class HomeViewModel extends ChangeNotifier {
   Future<void> _loadMoreBooks() async {
     try {
       state = state.copy(showLoading: true);
-      final List<Books> books = await _contentRepo.getBooks(page: state.pageNo!, itemsPerPage: 20, filters: []);
+      final List<Book> books = await _contentRepo.getBooks(page: state.pageNo!, itemsPerPage: 20, filters: []);
       state = state.copy(
           books: books,
           showLoading: false

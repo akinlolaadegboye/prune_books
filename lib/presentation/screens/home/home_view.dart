@@ -1,7 +1,6 @@
-import 'package:prune/data/sources/shared/models/books.dart';
+import 'package:prune/data/sources/shared/models/book.dart';
 import 'package:prune/presentation/screens/base_view_state.dart';
 import 'package:flutter/widgets.dart';
-import 'package:prune/values/strings.dart';
 
 abstract class HomeScreenIntent {}
 
@@ -12,7 +11,7 @@ class LiveLessonReloaded extends HomeScreenIntent {}
 @immutable
 class HomeViewState extends BaseViewState {
   final int? pageNo;
-  final List<Books>? books;
+  final List<Book>? books;
 
   HomeViewState(
       {this.pageNo,
@@ -29,7 +28,7 @@ class HomeViewState extends BaseViewState {
 
   HomeViewState copy(
       {int? pageNo,
-      List<Books>? books,
+      List<Book>? books,
       Exception? error,
       bool? showLoading,
       }) {

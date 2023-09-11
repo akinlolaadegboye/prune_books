@@ -1,4 +1,4 @@
-import 'package:prune/data/sources/shared/models/books.dart';
+import 'package:prune/data/sources/shared/models/book.dart';
 import 'package:prune/presentation/components/general.dart';
 import 'package:prune/utils/general_utils.dart';
 import 'package:prune/values/colors.dart';
@@ -7,9 +7,9 @@ import 'package:prune/values/strings.dart';
 import 'package:prune/values/styles.dart';
 
 class BookItem extends StatelessWidget {
-  final Books books;
+  final Book book;
 
-  const BookItem({required this.books, Key? key})
+  const BookItem({required this.book, Key? key})
       : super(key: key);
 
   @override
@@ -22,15 +22,15 @@ class BookItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _contentItem(context,Strings.bookAuthor, books.bookAuthor[0]),
+            _contentItem(context,Strings.bookAuthor, book.bookAuthor.isNotEmpty ? book.bookAuthor[0] : ''),
             _space,
-            _contentItem(context,Strings.bookTitle, books.bookTitle),
+            _contentItem(context,Strings.bookTitle, book.bookTitle),
             _space,
-            _contentItem(context,Strings.publicationCity, books.publicationCity),
+            _contentItem(context,Strings.publicationCity, book.publicationCity),
             _space,
-            _contentItem(context,Strings.publicationCountry, books.publicationCountry),
+            _contentItem(context,Strings.publicationCountry, book.publicationCountry),
             _space,
-            _contentItem(context,Strings.bookPages, '${books.bookPage}')
+            _contentItem(context,Strings.bookPages, '${book.bookPage}')
           ],
         ),
       ),
@@ -44,9 +44,10 @@ class BookItem extends StatelessWidget {
   _contentItem(BuildContext context, String name, String value){
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          width: GeneralUtils().getScreenWidth(context) * .3,
+          width: GeneralUtils().getScreenWidth(context) * .28,
           child: Text(
             name,
             style: TextStyles.lighterSecBody.copyWith(

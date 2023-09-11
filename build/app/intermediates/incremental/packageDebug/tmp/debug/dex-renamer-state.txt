@@ -1,4 +1,4 @@
-#Mon Sep 11 10:59:31 WAT 2023
+#Mon Sep 11 11:32:18 WAT 2023
 base.1=/Users/aoamacsplace/StudioProjects/prune_books/build/app/intermediates/dex/debug/mergeDexDebug/classes2.dex
 path.1=classes2.dex
 base.0=/Users/aoamacsplace/StudioProjects/prune_books/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex

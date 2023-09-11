@@ -1,8 +1,8 @@
 import "package:json_annotation/json_annotation.dart";
-part 'books.g.dart';
+part 'book.g.dart';
 
 @JsonSerializable(includeIfNull: true, fieldRename: FieldRename.snake)
-class Books {
+class Book {
 
   int id;
   @JsonKey(name: 'book_author')
@@ -18,7 +18,7 @@ class Books {
   @JsonKey(name: 'book_pages')
   int bookPage;
 
-  Books(
+  Book(
       {required this.id,
         required this.bookAuthor,
         required this.bookTitle,
@@ -28,9 +28,9 @@ class Books {
         required this.bookPage,
       });
 
-  factory Books.fromJson(Map<String, dynamic> json) => _$BooksFromJson(json);
+  factory Book.fromJson(Map<String, dynamic> json) => _$BookFromJson(json);
 
-  Map<String, dynamic> toJson() => _$BooksToJson(this);
+  Map<String, dynamic> toJson() => _$BookToJson(this);
 
 }
 

@@ -1,5 +1,5 @@
 import 'package:prune/data/sources/remote/requests/books.dart';
-import 'package:prune/data/sources/shared/models/books.dart';
+import 'package:prune/data/sources/shared/models/book.dart';
 import 'package:dio/dio.dart';
 import 'package:prune/data/sources/remote/utils/api_endpoints.dart';
 import 'package:retrofit/retrofit.dart';
@@ -12,7 +12,7 @@ abstract class ApiService {
   factory ApiService(Dio dio) = _ApiService;
 
   @POST(EndPoints.getBooks)
-  Future<List<Books>> getBooks(BooksRequest request);
+  Future<List<Book>> getBooks(BooksRequest request);
 
 
 }
