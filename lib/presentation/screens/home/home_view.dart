@@ -1,6 +1,7 @@
 import 'package:prune/data/sources/shared/models/books.dart';
 import 'package:prune/presentation/screens/base_view_state.dart';
 import 'package:flutter/widgets.dart';
+import 'package:prune/values/strings.dart';
 
 abstract class HomeScreenIntent {}
 
@@ -22,6 +23,8 @@ class HomeViewState extends BaseViewState {
 
   @override
   bool get showMainView => books != null;
+
+
 
 
   HomeViewState copy(

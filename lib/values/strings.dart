@@ -15,6 +15,7 @@ class Strings {
 
   static const internetConnectionErrorUIMessage = 'Connection error...!\nPlease tap on the button below';
   static const internetConnectionCheckString = 'Failed host lookup: \'nyx.vima.ekt.gr\'';
+  static const internetCheckString = 'Exception: Please check your internet connection and try again';
 
 
   static const books = 'Books';
