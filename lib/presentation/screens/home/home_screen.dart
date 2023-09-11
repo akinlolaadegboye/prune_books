@@ -37,7 +37,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     _viewModel ??= Provider.of<HomeViewModel>(context);
     postFrameCallback(_listenToState);
-    print('ERROR_T ::: ${_viewState.error}');
     return SafeArea(
       child: Scaffold(
         key: _key,
