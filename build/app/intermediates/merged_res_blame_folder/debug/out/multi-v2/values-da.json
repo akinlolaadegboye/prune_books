@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/aoamacsplace/StudioProjects/prune_books/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-da/values-da.xml",
+            "map": [
+                {
+                    "source": "/Users/aoamacsplace/.gradle/caches/transforms-3/02055d7fb770d0e1263f54ca422626d4/transformed/core-1.6.0/res/values-da/values-da.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
